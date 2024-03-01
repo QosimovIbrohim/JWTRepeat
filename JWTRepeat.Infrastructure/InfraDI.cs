@@ -18,7 +18,7 @@ namespace JWTRepeat.Infrastructure
         {
             services.AddDbContext<JWTRepeatDbContext>(ops =>
             {
-                ops.UseNpgsql(configuration.GetConnectionString(""));
+                ops.UseNpgsql(configuration.GetConnectionString("Cs"));
             });
             services.AddScoped<IUserRepository, UserRepository>();
             return services;
