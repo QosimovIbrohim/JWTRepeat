@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTRepeat.API", "JWTRepeat.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTRepeat.Domain", "JWTRepeat.Domain\JWTRepeat.Domain.csproj", "{62FF334D-4905-47B6-A3F4-15D07D340D12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTRepeat.Infrastructure", "JWTRepeat.Infrastructure\JWTRepeat.Infrastructure.csproj", "{8C800B47-EC77-4609-AA8F-289F02EB640A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTRepeat.Application", "JWTRepeat.Application\JWTRepeat.Application.csproj", "{1EE82985-EFDA-4EC9-9CB8-01411357A5D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{62FF334D-4905-47B6-A3F4-15D07D340D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62FF334D-4905-47B6-A3F4-15D07D340D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62FF334D-4905-47B6-A3F4-15D07D340D12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C800B47-EC77-4609-AA8F-289F02EB640A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C800B47-EC77-4609-AA8F-289F02EB640A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C800B47-EC77-4609-AA8F-289F02EB640A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C800B47-EC77-4609-AA8F-289F02EB640A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EE82985-EFDA-4EC9-9CB8-01411357A5D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EE82985-EFDA-4EC9-9CB8-01411357A5D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EE82985-EFDA-4EC9-9CB8-01411357A5D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EE82985-EFDA-4EC9-9CB8-01411357A5D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
