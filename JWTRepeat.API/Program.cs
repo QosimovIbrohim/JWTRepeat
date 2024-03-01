@@ -1,5 +1,5 @@
 using JWTRepeat.Infrastructure;
-
+using JWTRepeat.Application;
 namespace JWTRepeat.API
 {
     public class Program
@@ -15,6 +15,7 @@ namespace JWTRepeat.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddJWTContext(builder.Configuration);
+            builder.Services.AddApplicationDI();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
