@@ -1,5 +1,5 @@
-using JWTRepeat.Infrastructure;
 using JWTRepeat.Application;
+using JWTRepeat.Infrastructure;
 namespace JWTRepeat.API
 {
     public class Program
@@ -9,13 +9,13 @@ namespace JWTRepeat.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddJWTContext(builder.Configuration);
+            builder.Services.AddApplicationDI();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddJWTContext(builder.Configuration);
-            builder.Services.AddApplicationDI();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

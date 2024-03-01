@@ -1,10 +1,6 @@
-﻿using JWTRepeat.Application.Services.UserServices;
+﻿using JWTRepeat.Application.Abstractions;
+using JWTRepeat.Application.Services.UserServices;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JWTRepeat.Application
 {
@@ -13,6 +9,7 @@ namespace JWTRepeat.Application
         public static IServiceCollection AddApplicationDI(this IServiceCollection services)
         {
             services.AddScoped<IUserService, UserService>();
+
             return services;
         }
     }

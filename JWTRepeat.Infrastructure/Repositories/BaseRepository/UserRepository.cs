@@ -1,5 +1,5 @@
-﻿using JWTRepeat.Domain.Entities;
-using JWTRepeat.Application.Abstractions;
+﻿using JWTRepeat.Application.Abstractions;
+using JWTRepeat.Domain.Entities;
 using JWTRepeat.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
 

@@ -4,11 +4,6 @@ using JWTRepeat.Infrastructure.Repositories.BaseRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JWTRepeat.Infrastructure
 {
@@ -16,11 +11,12 @@ namespace JWTRepeat.Infrastructure
     {
         public static IServiceCollection AddJWTContext(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<JWTRepeatDbContext>(ops =>
+            services.AddDbContext<JWTRepeatDbContext>(options=>
             {
-                ops.UseNpgsql(configuration.GetConnectionString("Cs"));
+                options.UseNpgsql(configuration.GetConnectionString("Cs"));
+
             });
-            services.AddScoped<IUserRepository, UserRepository>();
+            
             return services;
 
         }

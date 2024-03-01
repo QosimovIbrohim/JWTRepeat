@@ -1,16 +1,20 @@
-﻿using JWTRepeat.Domain.DataTransferObjects;
+﻿using JWTRepeat.Application.Abstractions;
+using JWTRepeat.Domain.DataTransferObjects;
 using JWTRepeat.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO.Pipes;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JWTRepeat.Application.Services.UserServices
 {
     public class UserService : IUserService
     {
+        private readonly IUserRepository _uR;
+
+        public UserService(IUserRepository uR)
+        {
+            _uR = uR;
+        }
+
         public Task<User> Create(User user)
         {
             throw new NotImplementedException();
@@ -21,9 +25,9 @@ namespace JWTRepeat.Application.Services.UserServices
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<User>> GetAll()
+        public async Task<IEnumerable<User>> GetAll()
         {
-            throw new NotImplementedException();
+           return await _uR.GetAll();
         }
 
         public Task<User> GetByAny(Expression<Func<User, bool>> expression)
